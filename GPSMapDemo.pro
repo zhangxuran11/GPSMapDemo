@@ -11,8 +11,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    geogpixsample.cpp \
+    gpsmapmanager.cpp \
+    mappanel.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    geogpixsample.h \
+    gpsmapmanager.h \
+    mappanel.h
 
 FORMS    += mainwindow.ui

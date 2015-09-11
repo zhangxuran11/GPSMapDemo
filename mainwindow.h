@@ -6,15 +6,11 @@
 namespace Ui {
 class MainWindow;
 }
-
+class MapPanel;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    qreal x;
-    qreal y;
-    int off_x;
-    int off_y;
-    qreal scale;
+    MapPanel* mapPanel;
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
@@ -39,8 +35,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    void paintEvent(QPaintEvent *);
-    void paintMap(QPaintDevice *canvas,const QPointF& refPointPix,const QPointF& refPointGeog,double x_lon_factor,double y_lan_factor,double longitude,double latitude);
+    //void paintEvent(QPaintEvent *);
+    //void paintMap(QPaintDevice *canvas,const QPointF& refPointPix,const QPointF& refPointGeog,double x_lon_factor,double y_lan_factor,double longitude,double latitude);
 };
 
 #endif // MAINWINDOW_H

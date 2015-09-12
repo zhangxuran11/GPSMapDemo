@@ -1,0 +1,9 @@
+./geogpixsample.h
+./mainwindow.h
+./gpsmapmanager.cpp
+./geogpixsample.cpp
+./mainwindow.cpp
+./gpsmapmanager.h
+./mappanel.cpp
+./main.cpp
+./mappanel.h

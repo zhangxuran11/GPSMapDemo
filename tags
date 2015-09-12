@@ -1,0 +1,135 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+GEOGPIXSAMPLE_H	geogpixsample.h	2;"	d
+GPSMAPMANAGER_H	gpsmapmanager.h	2;"	d
+GPSMapManager	gpsmapmanager.cpp	/^GPSMapManager::GPSMapManager(const GeogPixSample& mapSample1,const GeogPixSample& mapSample2)$/;"	f	class:GPSMapManager	signature:(const GeogPixSample& mapSample1,const GeogPixSample& mapSample2)
+GPSMapManager	gpsmapmanager.cpp	/^GPSMapManager::GPSMapManager(const std::vector<GeogPixSample> &_samples)$/;"	f	class:GPSMapManager	signature:(const std::vector<GeogPixSample> &_samples)
+GPSMapManager	gpsmapmanager.h	/^    GPSMapManager(){}$/;"	f	class:GPSMapManager	access:public	signature:()
+GPSMapManager	gpsmapmanager.h	/^    GPSMapManager(const std::list<GeogPixSample> &_sampleList);$/;"	p	class:GPSMapManager	access:public	signature:(const std::list<GeogPixSample> &_sampleList)
+GPSMapManager	gpsmapmanager.h	/^class GPSMapManager$/;"	c
+GPSMapManager::GPSMapManager	gpsmapmanager.cpp	/^GPSMapManager::GPSMapManager(const GeogPixSample& mapSample1,const GeogPixSample& mapSample2)$/;"	f	class:GPSMapManager	signature:(const GeogPixSample& mapSample1,const GeogPixSample& mapSample2)
+GPSMapManager::GPSMapManager	gpsmapmanager.cpp	/^GPSMapManager::GPSMapManager(const std::vector<GeogPixSample> &_samples)$/;"	f	class:GPSMapManager	signature:(const std::vector<GeogPixSample> &_samples)
+GPSMapManager::GPSMapManager	gpsmapmanager.h	/^    GPSMapManager(){}$/;"	f	class:GPSMapManager	access:public	signature:()
+GPSMapManager::GPSMapManager	gpsmapmanager.h	/^    GPSMapManager(const std::list<GeogPixSample> &_sampleList);$/;"	p	class:GPSMapManager	access:public	signature:(const std::list<GeogPixSample> &_sampleList)
+GPSMapManager::find	gpsmapmanager.h	/^    GeogPixSample find(double lng,double lat);$/;"	p	class:GPSMapManager	access:public	signature:(double lng,double lat)
+GPSMapManager::findSample	gpsmapmanager.h	/^    const GeogPixSample& findSample(double lng,double lat);$/;"	p	class:GPSMapManager	access:public	signature:(double lng,double lat)
+GPSMapManager::geog2pix	gpsmapmanager.cpp	/^QPointF GPSMapManager::geog2pix(double lng,double lat)$/;"	f	class:GPSMapManager	signature:(double lng,double lat)
+GPSMapManager::geog2pix	gpsmapmanager.h	/^    QPointF geog2pix(double lng,double lat);$/;"	p	class:GPSMapManager	access:public	signature:(double lng,double lat)
+GPSMapManager::refPoint	gpsmapmanager.h	/^    GeogPixSample refPoint;$/;"	m	class:GPSMapManager	access:private
+GPSMapManager::sampleList	gpsmapmanager.h	/^    std::vector<GeogPixSample> sampleList;$/;"	m	class:GPSMapManager	access:private
+GPSMapManager::x_lng_factor	gpsmapmanager.h	/^    double x_lng_factor;$/;"	m	class:GPSMapManager	access:private
+GPSMapManager::y_lat_factor	gpsmapmanager.h	/^    double y_lat_factor;$/;"	m	class:GPSMapManager	access:private
+GeogPixSample	geogpixsample.cpp	/^GeogPixSample::GeogPixSample(double _pix_x,double _pix_y,double _lng,double _lat)$/;"	f	class:GeogPixSample	signature:(double _pix_x,double _pix_y,double _lng,double _lat)
+GeogPixSample	geogpixsample.h	/^    GeogPixSample(){}$/;"	f	class:GeogPixSample	access:public	signature:()
+GeogPixSample	geogpixsample.h	/^    GeogPixSample(double _pix_x,double _pix_y,double _lng,double _lat);$/;"	p	class:GeogPixSample	access:public	signature:(double _pix_x,double _pix_y,double _lng,double _lat)
+GeogPixSample	geogpixsample.h	/^class GeogPixSample$/;"	c
+GeogPixSample::GeogPixSample	geogpixsample.cpp	/^GeogPixSample::GeogPixSample(double _pix_x,double _pix_y,double _lng,double _lat)$/;"	f	class:GeogPixSample	signature:(double _pix_x,double _pix_y,double _lng,double _lat)
+GeogPixSample::GeogPixSample	geogpixsample.h	/^    GeogPixSample(){}$/;"	f	class:GeogPixSample	access:public	signature:()
+GeogPixSample::GeogPixSample	geogpixsample.h	/^    GeogPixSample(double _pix_x,double _pix_y,double _lng,double _lat);$/;"	p	class:GeogPixSample	access:public	signature:(double _pix_x,double _pix_y,double _lng,double _lat)
+GeogPixSample::lat	geogpixsample.h	/^    double lat;$/;"	m	class:GeogPixSample	access:private
+GeogPixSample::lng	geogpixsample.h	/^    double lng;$/;"	m	class:GeogPixSample	access:private
+GeogPixSample::operator <	geogpixsample.h	/^    bool operator<(const GeogPixSample& sample){return lat<sample.lat;}$/;"	f	class:GeogPixSample	access:public	signature:(const GeogPixSample& sample)
+GeogPixSample::pix_x	geogpixsample.h	/^    double pix_x;$/;"	m	class:GeogPixSample	access:private
+GeogPixSample::pix_y	geogpixsample.h	/^    double pix_y;$/;"	m	class:GeogPixSample	access:private
+GeogPixSample::x_lng_factor_under	geogpixsample.h	/^    double x_lng_factor_under;$/;"	m	class:GeogPixSample	access:private
+GeogPixSample::x_lng_factor_upper	geogpixsample.h	/^    double x_lng_factor_upper;$/;"	m	class:GeogPixSample	access:private
+GeogPixSample::y_lat_factor_under	geogpixsample.h	/^    double y_lat_factor_under;$/;"	m	class:GeogPixSample	access:private
+GeogPixSample::y_lat_factor_upper	geogpixsample.h	/^    double y_lat_factor_upper;$/;"	m	class:GeogPixSample	access:private
+MAINWINDOW_H	mainwindow.h	2;"	d
+MAPPANEL_H	mappanel.h	2;"	d
+MainWindow	mainwindow.cpp	/^MainWindow::MainWindow(QWidget *parent) :$/;"	f	class:MainWindow	signature:(QWidget *parent)
+MainWindow	mainwindow.h	/^    explicit MainWindow(QWidget *parent = 0);$/;"	p	class:MainWindow	access:public	signature:(QWidget *parent = 0)
+MainWindow	mainwindow.h	/^class MainWindow : public QMainWindow$/;"	c	inherits:QMainWindow
+MainWindow::MainWindow	mainwindow.cpp	/^MainWindow::MainWindow(QWidget *parent) :$/;"	f	class:MainWindow	signature:(QWidget *parent)
+MainWindow::MainWindow	mainwindow.h	/^    explicit MainWindow(QWidget *parent = 0);$/;"	p	class:MainWindow	access:public	signature:(QWidget *parent = 0)
+MainWindow::mapPanel	mainwindow.h	/^    MapPanel* mapPanel;$/;"	m	class:MainWindow	access:private
+MainWindow::on_btn_down_clicked	mainwindow.cpp	/^void MainWindow::on_btn_down_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_btn_down_clicked	mainwindow.h	/^    void on_btn_down_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::on_btn_left_clicked	mainwindow.cpp	/^void MainWindow::on_btn_left_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_btn_left_clicked	mainwindow.h	/^    void on_btn_left_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::on_btn_right_clicked	mainwindow.cpp	/^void MainWindow::on_btn_right_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_btn_right_clicked	mainwindow.h	/^    void on_btn_right_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::on_btn_scale_add_clicked	mainwindow.cpp	/^void MainWindow::on_btn_scale_add_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_btn_scale_add_clicked	mainwindow.h	/^    void on_btn_scale_add_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::on_btn_scale_sub_clicked	mainwindow.cpp	/^void MainWindow::on_btn_scale_sub_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_btn_scale_sub_clicked	mainwindow.h	/^    void on_btn_scale_sub_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::on_btn_up_clicked	mainwindow.cpp	/^void MainWindow::on_btn_up_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_btn_up_clicked	mainwindow.h	/^    void on_btn_up_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::on_pushButton_clicked	mainwindow.cpp	/^void MainWindow::on_pushButton_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_pushButton_clicked	mainwindow.h	/^    void on_pushButton_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::on_push_dw_clicked	mainwindow.cpp	/^void MainWindow::on_push_dw_clicked()$/;"	f	class:MainWindow	signature:()
+MainWindow::on_push_dw_clicked	mainwindow.h	/^    void on_push_dw_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+MainWindow::ui	mainwindow.h	/^    Ui::MainWindow *ui;$/;"	m	class:MainWindow	access:private
+MainWindow::~MainWindow	mainwindow.cpp	/^MainWindow::~MainWindow()$/;"	f	class:MainWindow	signature:()
+MainWindow::~MainWindow	mainwindow.h	/^    ~MainWindow();$/;"	p	class:MainWindow	access:public	signature:()
+MapPanel	mappanel.cpp	/^MapPanel::MapPanel(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent) :$/;"	f	class:MapPanel	signature:(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent)
+MapPanel	mappanel.h	/^    explicit MapPanel(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent = 0);$/;"	p	class:MapPanel	access:public	signature:(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent = 0)
+MapPanel	mappanel.h	/^class MapPanel : public QWidget$/;"	c	inherits:QWidget
+MapPanel::MapPanel	mappanel.cpp	/^MapPanel::MapPanel(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent) :$/;"	f	class:MapPanel	signature:(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent)
+MapPanel::MapPanel	mappanel.h	/^    explicit MapPanel(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent = 0);$/;"	p	class:MapPanel	access:public	signature:(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent = 0)
+MapPanel::gpsMap	mappanel.h	/^    QImage gpsMap;$/;"	m	class:MapPanel	access:private
+MapPanel::lat	mappanel.h	/^    double lat;$/;"	m	class:MapPanel	access:public
+MapPanel::lng	mappanel.h	/^    double lng;$/;"	m	class:MapPanel	access:public
+MapPanel::mapMagager	mappanel.h	/^    GPSMapManager mapMagager;$/;"	m	class:MapPanel	access:private
+MapPanel::off_x	mappanel.h	/^    int off_x;$/;"	m	class:MapPanel	access:public
+MapPanel::off_y	mappanel.h	/^    int off_y;$/;"	m	class:MapPanel	access:public
+MapPanel::paintEvent	mappanel.cpp	/^void MapPanel::paintEvent(QPaintEvent *)$/;"	f	class:MapPanel	signature:(QPaintEvent *)
+MapPanel::paintEvent	mappanel.h	/^    void paintEvent(QPaintEvent *);$/;"	p	class:MapPanel	access:private	signature:(QPaintEvent *)
+MapPanel::positioning	mappanel.cpp	/^void MapPanel::positioning()$/;"	f	class:MapPanel	signature:()
+MapPanel::positioning	mappanel.h	/^    void positioning();\/\/定位$/;"	p	class:MapPanel	access:public	signature:()
+MapPanel::scale	mappanel.h	/^    float scale;$/;"	m	class:MapPanel	access:public
+Ui	mainwindow.h	/^namespace Ui {$/;"	n
+find	gpsmapmanager.h	/^    GeogPixSample find(double lng,double lat);$/;"	p	class:GPSMapManager	access:public	signature:(double lng,double lat)
+findSample	gpsmapmanager.cpp	/^const GeogPixSample& findSample(double lng,double lat)$/;"	f	signature:(double lng,double lat)
+findSample	gpsmapmanager.h	/^    const GeogPixSample& findSample(double lng,double lat);$/;"	p	class:GPSMapManager	access:public	signature:(double lng,double lat)
+geog2pix	gpsmapmanager.cpp	/^QPointF GPSMapManager::geog2pix(double lng,double lat)$/;"	f	class:GPSMapManager	signature:(double lng,double lat)
+geog2pix	gpsmapmanager.h	/^    QPointF geog2pix(double lng,double lat);$/;"	p	class:GPSMapManager	access:public	signature:(double lng,double lat)
+gpsMap	mappanel.h	/^    QImage gpsMap;$/;"	m	class:MapPanel	access:private
+lat	geogpixsample.h	/^    double lat;$/;"	m	class:GeogPixSample	access:private
+lat	mappanel.h	/^    double lat;$/;"	m	class:MapPanel	access:public
+lng	geogpixsample.h	/^    double lng;$/;"	m	class:GeogPixSample	access:private
+lng	mappanel.h	/^    double lng;$/;"	m	class:MapPanel	access:public
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+mapMagager	mappanel.h	/^    GPSMapManager mapMagager;$/;"	m	class:MapPanel	access:private
+mapPanel	mainwindow.h	/^    MapPanel* mapPanel;$/;"	m	class:MainWindow	access:private
+off_x	mappanel.h	/^    int off_x;$/;"	m	class:MapPanel	access:public
+off_y	mappanel.h	/^    int off_y;$/;"	m	class:MapPanel	access:public
+on_btn_down_clicked	mainwindow.cpp	/^void MainWindow::on_btn_down_clicked()$/;"	f	class:MainWindow	signature:()
+on_btn_down_clicked	mainwindow.h	/^    void on_btn_down_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+on_btn_left_clicked	mainwindow.cpp	/^void MainWindow::on_btn_left_clicked()$/;"	f	class:MainWindow	signature:()
+on_btn_left_clicked	mainwindow.h	/^    void on_btn_left_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+on_btn_right_clicked	mainwindow.cpp	/^void MainWindow::on_btn_right_clicked()$/;"	f	class:MainWindow	signature:()
+on_btn_right_clicked	mainwindow.h	/^    void on_btn_right_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+on_btn_scale_add_clicked	mainwindow.cpp	/^void MainWindow::on_btn_scale_add_clicked()$/;"	f	class:MainWindow	signature:()
+on_btn_scale_add_clicked	mainwindow.h	/^    void on_btn_scale_add_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+on_btn_scale_sub_clicked	mainwindow.cpp	/^void MainWindow::on_btn_scale_sub_clicked()$/;"	f	class:MainWindow	signature:()
+on_btn_scale_sub_clicked	mainwindow.h	/^    void on_btn_scale_sub_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+on_btn_up_clicked	mainwindow.cpp	/^void MainWindow::on_btn_up_clicked()$/;"	f	class:MainWindow	signature:()
+on_btn_up_clicked	mainwindow.h	/^    void on_btn_up_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+on_pushButton_clicked	mainwindow.cpp	/^void MainWindow::on_pushButton_clicked()$/;"	f	class:MainWindow	signature:()
+on_pushButton_clicked	mainwindow.h	/^    void on_pushButton_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+on_push_dw_clicked	mainwindow.cpp	/^void MainWindow::on_push_dw_clicked()$/;"	f	class:MainWindow	signature:()
+on_push_dw_clicked	mainwindow.h	/^    void on_push_dw_clicked();$/;"	p	class:MainWindow	access:private	signature:()
+operator <	geogpixsample.h	/^    bool operator<(const GeogPixSample& sample){return lat<sample.lat;}$/;"	f	class:GeogPixSample	access:public	signature:(const GeogPixSample& sample)
+paintEvent	mappanel.cpp	/^void MapPanel::paintEvent(QPaintEvent *)$/;"	f	class:MapPanel	signature:(QPaintEvent *)
+paintEvent	mappanel.h	/^    void paintEvent(QPaintEvent *);$/;"	p	class:MapPanel	access:private	signature:(QPaintEvent *)
+pix_x	geogpixsample.h	/^    double pix_x;$/;"	m	class:GeogPixSample	access:private
+pix_y	geogpixsample.h	/^    double pix_y;$/;"	m	class:GeogPixSample	access:private
+positioning	mappanel.cpp	/^void MapPanel::positioning()$/;"	f	class:MapPanel	signature:()
+positioning	mappanel.h	/^    void positioning();\/\/定位$/;"	p	class:MapPanel	access:public	signature:()
+refPoint	gpsmapmanager.h	/^    GeogPixSample refPoint;$/;"	m	class:GPSMapManager	access:private
+sampleList	gpsmapmanager.h	/^    std::vector<GeogPixSample> sampleList;$/;"	m	class:GPSMapManager	access:private
+scale	mappanel.h	/^    float scale;$/;"	m	class:MapPanel	access:public
+ui	mainwindow.h	/^    Ui::MainWindow *ui;$/;"	m	class:MainWindow	access:private
+x_lng_factor	gpsmapmanager.h	/^    double x_lng_factor;$/;"	m	class:GPSMapManager	access:private
+x_lng_factor_under	geogpixsample.h	/^    double x_lng_factor_under;$/;"	m	class:GeogPixSample	access:private
+x_lng_factor_upper	geogpixsample.h	/^    double x_lng_factor_upper;$/;"	m	class:GeogPixSample	access:private
+y_lat_factor	gpsmapmanager.h	/^    double y_lat_factor;$/;"	m	class:GPSMapManager	access:private
+y_lat_factor_under	geogpixsample.h	/^    double y_lat_factor_under;$/;"	m	class:GeogPixSample	access:private
+y_lat_factor_upper	geogpixsample.h	/^    double y_lat_factor_upper;$/;"	m	class:GeogPixSample	access:private
+~MainWindow	mainwindow.cpp	/^MainWindow::~MainWindow()$/;"	f	class:MainWindow	signature:()
+~MainWindow	mainwindow.h	/^    ~MainWindow();$/;"	p	class:MainWindow	access:public	signature:()

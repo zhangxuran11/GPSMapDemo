@@ -2,15 +2,17 @@
 #define GPSMAPMANAGER_H
 #include"geogpixsample.h"
 #include<QPointF>
+#include<vector>
 class GPSMapManager
 {
-    GeogPixSample refPoint;
-    double x_lng_factor;
-    double y_lat_factor;
+    std::vector<GeogPixSample> samples;
 public:
     GPSMapManager(){}
-    GPSMapManager(const GeogPixSample& mapSample1,const GeogPixSample& mapSample2);
+    GPSMapManager(const std::vector<GeogPixSample> &_samples);
+    GeogPixSample find(double lng,double lat);
     QPointF geog2pix(double lng,double lat);
+private:
+	const std::vector<GeogPixSample> findSample(double lng,double lat);
 };
 
 #endif // GPSMAPMANAGER_H

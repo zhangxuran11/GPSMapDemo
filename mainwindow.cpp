@@ -6,13 +6,19 @@
 #include"mappanel.h"
 //#include"gpsmapmanager.h"
 #include"geogpixsample.h"
+#include <vector>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 
 {
     ui->setupUi(this);
-    mapPanel = new MapPanel("GPSMap.png",GPSMapManager(GeogPixSample(1991,51,106.805015,-20.675571),GeogPixSample(776,2730,100.120199,-6.423076)),this);
+	std::vector<GeogPixSample> v;
+	v.push_back(GeogPixSample(1991,51,106.805015,-20.675571));
+	v.push_back(GeogPixSample(776,2730,100.120199,-6.423076));
+	v.push_back(GeogPixSample(861,1414,100.578835,-13.555069));
+	v.push_back(GeogPixSample(1743,951,105.426127,-15.991936));
+    mapPanel = new MapPanel("GPSMap.png",GPSMapManager(v),this);
 
     QStringList strList = ui->line_lng->text().split(QChar(','));
     mapPanel->lng = strList[1].toDouble();
@@ -111,4 +117,9 @@ void MainWindow::on_btn_scale_sub_clicked()
 void MainWindow::on_push_dw_clicked()
 {
     mapPanel->positioning();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    mapPanel->saveImage(500,500,"./zztest.png");
 }

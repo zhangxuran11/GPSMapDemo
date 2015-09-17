@@ -9,16 +9,12 @@ QT       += core gui
 TARGET = GPSMapDemo
 TEMPLATE = app
 
-
+include(GPSMapManager/GPSMapManager.pri)
 SOURCES += main.cpp\
         mainwindow.cpp \
-    geogpixsample.cpp \
-    gpsmapmanager.cpp \
     mappanel.cpp
 
 HEADERS  += mainwindow.h \
-    geogpixsample.h \
-    gpsmapmanager.h \
     mappanel.h
 
 FORMS    += mainwindow.ui

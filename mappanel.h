@@ -7,17 +7,14 @@
 class MapPanel : public QWidget
 {
     Q_OBJECT
-    QImage mapImage;
-    GPSMapManager mapMagager;
+
 public:
     int off_x;
     int off_y;
     float scale;
-    double lng;
-    double lat;
-	QString mapPath;
+    GPSMapManager mapMagager;
 public:
-    explicit MapPanel(const QString& mapPath,const GPSMapManager& _mapManager,QWidget *parent = 0);
+    explicit MapPanel(const GPSMapManager& _mapManager,QWidget *parent = 0);
     void positioning();//定位
     void saveImage(int width,int height,const QString& toFileName);
 signals:

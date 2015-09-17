@@ -1,6 +1,6 @@
 #ifndef GEOGPIXSAMPLE_H
 #define GEOGPIXSAMPLE_H
-class GPSMapManager;
+
 class GeogPixSample
 {
     double pix_x;
@@ -15,4 +15,3 @@ public:
 };
 
 #endif // GEOGPIXSAMPLE_H
-

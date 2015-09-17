@@ -7,4 +7,3 @@ GeogPixSample::GeogPixSample(double _pix_x,double _pix_y,double _lng,double _lat
     lng   = _lng;
     lat   = _lat;
 }
-

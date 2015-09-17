@@ -1,16 +1,19 @@
 #include "gpsmapmanager.h"
-#include"geogpixsample.h"
 #include <cmath>
+#include<QPainter>
 #include <algorithm>
 
-GPSMapManager::GPSMapManager(const std::vector<GeogPixSample> &_samples)
-		:samples(_samples)
+
+
+
+GPSMapManager::GPSMapManager(const QString& _mapPath,const SamplesList &_samples)
+    :samples(_samples),mapPath(_mapPath)
 {
 	
 }
 QPointF GPSMapManager::geog2pix(double lng,double lat)
 {
-	const std::vector<GeogPixSample> refPoints = findSample(lng,lat);
+    const SamplesList refPoints = findSample(lng,lat);
 	double x_lng_factor = (refPoints[1].pix_x-refPoints[0].pix_x)/(refPoints[1].lng-refPoints[0].lng);
 	double y_lat_factor = (refPoints[1].pix_y-refPoints[0].pix_y)/(refPoints[1].lat-refPoints[0].lat);
 
@@ -18,13 +21,13 @@ QPointF GPSMapManager::geog2pix(double lng,double lat)
     double y = refPoints[0].pix_y + (lat - refPoints[0].lat) * y_lat_factor;
     return QPointF(x,y);
 }
-const std::vector<GeogPixSample> GPSMapManager::findSample(double lng,double lat)
+const SamplesList GPSMapManager::findSample(double lng,double lat)
 {
-	std::vector<GeogPixSample> v;
+    SamplesList v;
 	GeogPixSample* sample1 = &samples[0];
 	GeogPixSample* sample2 = &samples[1];
 	double dist1 = 180,dist2 = 180;
-	for(std::vector<GeogPixSample>::iterator it = samples.begin(); it != samples.end(); it++)
+    for(SamplesList::iterator it = samples.begin(); it != samples.end(); it++)
 	{
 		double dist = sqrt(pow(it->lat - lat,2)+pow(it->lng - lng,2));
 		if (dist < dist1)
@@ -44,4 +47,23 @@ const std::vector<GeogPixSample> GPSMapManager::findSample(double lng,double lat
 	v.push_back(*sample1);
 	v.push_back(*sample2);
 	return v;
+}
+const QImage& GPSMapManager::getImage()
+{
+    mapImage.load(mapPath);
+
+    QPainter painter;
+    painter.begin(&mapImage);
+    QPen pen(painter.pen());
+    pen.setWidth(10);
+    pen.setColor(QColor(Qt::red));
+    painter.setPen(pen);
+    painter.drawPoint(geog2pix(lng,lat));
+    painter.end();
+    return mapImage;
+}
+void GPSMapManager::saveImage(int width,int height,const QString& toFileName)
+{
+    QImage img(getImage().copy(geog2pix(lng,lat).x()-width/2,geog2pix(lng,lat).y()-height/2, width,height));
+    img.save(toFileName);
 }

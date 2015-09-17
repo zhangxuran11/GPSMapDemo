@@ -4,8 +4,6 @@
 #include<QPainter>
 #include<QDebug>
 #include"mappanel.h"
-//#include"gpsmapmanager.h"
-#include"geogpixsample.h"
 #include <vector>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -13,16 +11,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
 {
     ui->setupUi(this);
-	std::vector<GeogPixSample> v;
+    SamplesList v;
 	v.push_back(GeogPixSample(1991,51,106.805015,-20.675571));
 	v.push_back(GeogPixSample(776,2730,100.120199,-6.423076));
 	v.push_back(GeogPixSample(861,1414,100.578835,-13.555069));
 	v.push_back(GeogPixSample(1743,951,105.426127,-15.991936));
-    mapPanel = new MapPanel("GPSMap.png",GPSMapManager(v),this);
+    mapPanel = new MapPanel(GPSMapManager("GPSMap.png",v),this);
 
     QStringList strList = ui->line_lng->text().split(QChar(','));
-    mapPanel->lng = strList[1].toDouble();
-    mapPanel->lat = strList[0].toDouble()*(-1);
+    mapPanel->mapMagager.setLng(strList[1].toDouble());
+    mapPanel->mapMagager.setLat((strList[0].toDouble()*(-1)));
 
     mapPanel->resize(800,800);
     mapPanel->show();
@@ -72,8 +70,8 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     QStringList strList = ui->line_lng->text().split(QChar(','));
-    mapPanel->lng = strList[1].toDouble();
-    mapPanel->lat = strList[0].toDouble()*(-1);
+    mapPanel->mapMagager.setLng(strList[1].toDouble());
+    mapPanel->mapMagager.setLat(strList[0].toDouble()*(-1));
     mapPanel->update();
 
 }
